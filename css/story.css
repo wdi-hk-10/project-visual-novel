@@ -1,11 +1,16 @@
 .storytitle {
   margin-top: 0px;
-  background-color: #091D42;
+  background-color: #000000;
   padding: 20px;
-  color: red;
+  color: white;
 }
 
 .storytitle > h1 {
   font-size: 30px;
   font-weight: bold;
+}
+
+.body
+{
+background: #000000;
 }

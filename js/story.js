@@ -109,12 +109,14 @@ $(document).ready(function(){
 
   // Main program
 
-  textFrame.append('Start Game');
+  textFrame.append('The Last Man on Earth');
   leftButton.append('Start Game');
   rightButton.append('Exit Game');
 
   leftButton.on('click', function(){
-
+    $('.textframe').empty('').append('test');
+    /*currentScene = scene1.scene2;
+    setCurrentScene();*/
   });
 
 });

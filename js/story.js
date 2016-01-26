@@ -15,12 +15,12 @@ var Scene = function(option) {
 // scene creation
 var scene1 = new Scene({
   img: '../images/1.png',
-  description: '<h2>The last man on Earth sat alone in a room.</h2>'
+  description: 'The last man on Earth sat alone in a room.'
 });
 
 var scene2 = new Scene({
   img: '../images/2.png',
-  description: '<h2>There was a knock on the door...</h2>'
+  description: 'There was a knock on the door...'
 });
 
 var scene3 = new Scene({
@@ -85,7 +85,7 @@ var scene14 = new Scene({
 
 var scene15 = new Scene({
   img: '...',
-  description: '<h2>The coffin door opens gentle. A fully-grown woman slowly walks out of the coffin.</h2>'
+  description: '<h2>The coffin door opens gently. A fully-grown woman slowly walks out of the coffin.</h2>'
 });
 
 var scene16 = new Scene({
@@ -104,19 +104,27 @@ $(document).ready(function(){
   // Set up variables
   var currentScene = scene1;
   var textFrame = $('.textframe');
+  var storyCG = $('.storycg');
   var leftButton = $('.buttonleft');
   var rightButton = $('.buttonright');
 
   // Main program
 
   textFrame.append('The Last Man on Earth');
-  leftButton.append('Start Game');
-  rightButton.append('Exit Game');
+  leftButton.append('start game');
+  rightButton.append('start game');
 
   leftButton.on('click', function(){
-    $('.textframe').empty('').append('test');
-    /*currentScene = scene1.scene2;
-    setCurrentScene();*/
+    $('.textframe').text(currentScene.description);
+    $('.storycg').text(currentScene.img)
+    $('.buttonleft').text('next');
+    $('.buttonright').text('next');
+  });
+
+  rightButton.on('click', function(){
+    $('.textframe').text(description);
+    $('.buttonleft').text('next');
+    $('.buttonright').text('next');
   });
 
 });

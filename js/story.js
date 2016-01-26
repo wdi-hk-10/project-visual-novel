@@ -1,5 +1,3 @@
-$(document).ready(function(){
-
 /*
 Scenario A ('forever alone') will be the quickest way to end the game. This route contains 5 event CG to reach the worse ending.
   - shares 2 CG with Scenario B and C
@@ -19,5 +17,7 @@ routeB:['cg1', 'cg2', 'cg6', 'cg7', 'cg8', 'cg9']
 var scenarioC = {
 routeC:['cg1', 'cg2', 'cg6', 'cg7', 'cg10', 'cg11', 'cg12']
 };
+
+$(document).ready(function(){
 
 });

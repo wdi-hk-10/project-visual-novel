@@ -1,8 +1,8 @@
 @font-face {
-    font-family: 'EBMain';
-    src: url('../font/EBMain.ttf');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'EBMain';
+  src: url('../font/EBMain.ttf');
+  font-weight: normal;
+  font-style: normal;
 }
 
 .storytitle {
@@ -13,7 +13,7 @@
 
 .storytitle > h1{
   font-family: 'EBMain';
-  font-size: 45px;
+  font-size: 30px;
   font-weight: bold;
   color: white;
 }
@@ -22,20 +22,44 @@ body{
   background: #000000;
 }
 
-.storyCG{
-text-align: center;
-width: 100%;
-height: 100%;
+.storyCG {
+  text-align: center;
+  width: 100%;
+  height: 100%;
 }
 
-.textframe{
-background: url('../images/textbox.png');
-background-position: center;
-position: relative;
-width: 605px;
-height: 254px;
-margin: 0 auto;
-font-family: 'EBMain';
-font-size: 50px;
-color: white;
+.textframe {
+  background: url('../images/textbox.png');
+  background-position: center;
+  position: relative;
+  width: 605px;
+  height: 254px;
+  margin: 0 auto;
+  font-family: 'EBMain';
+  font-size: 50px;
+  color: white;
+  text-align: center;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.button1 {
+  display: inline-block;
+  font-family: 'EBMain';
+  font-size: 30px;
+  color: white;
+  background-color: black;
+  height: 60px;
+  width: 500px;
+}
+
+.button2 {
+  font-family: 'EBMain';
+  font-size: 30px;
+  color: white;
+  background-color: black;
+  height: 60px;
+  width: 500px;
 }

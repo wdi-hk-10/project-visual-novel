@@ -102,8 +102,8 @@ var scene17 = new Scene({
 
 $(document).ready(function(){
 
-var playGame = $('.textframe').append('The last man on Earth sat alone in a room.').css('text-align','center');
+var playGame = $('.textframe').append('The last man on Earth sat alone in a room.');
 
-var change = $('.textframe').empty('').append('There was a knock on the door').css('text-align','center');
+var changeText = $('.textframe').empty('').append('There was a knock on the door');
 
 });

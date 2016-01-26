@@ -12,7 +12,7 @@ var Scene = function(option) {
   this.routes = [];
 };
 
-// Scene Creation
+// scene creation
 var scene1 = new Scene({
   img: '../images/1.png',
   description: '<h2>The last man on Earth sat alone in a room.</h2>'
@@ -101,9 +101,20 @@ var scene17 = new Scene({
 //scene1.routes.push()
 
 $(document).ready(function(){
+  // Set up variables
+  var currentScene = scene1;
+  var textFrame = $('.textframe');
+  var leftButton = $('.buttonleft');
+  var rightButton = $('.buttonright');
 
-var playGame = $('.textframe').append('The last man on Earth sat alone in a room.');
+  // Main program
 
-var changeText = $('.textframe').empty('').append('There was a knock on the door');
+  textFrame.append('Start Game');
+  leftButton.append('Start Game');
+  rightButton.append('Exit Game');
+
+  leftButton.on('click', function(){
+
+  });
 
 });

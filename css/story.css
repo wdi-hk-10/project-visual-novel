@@ -79,7 +79,7 @@ body{
 }
 
 #scene {
-  background: url('../images/1.jpg');
+  background-image: url('../images/1.jpg');
   position: absolute;
   width: 397px;
   height: 300px;

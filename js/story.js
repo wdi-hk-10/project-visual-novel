@@ -23,29 +23,31 @@ var scene1 = new Scene({
 });
 
 var scene2 = new Scene({
-  img: '/images/2.jpg',
+  img: 'images/2.jpg',
   description: 'There was a knock on the door...',
   route1: 'ignore it',
   route2: 'open the door',
 });
 
 var scene3 = new Scene({
-  img: 'images/1.jpg',
+  img: 'images/2.jpg',
   description: 'The man ignores it.',
   route1: 'continue...',
   route2: '',
 });
 
 var scene4 = new Scene({
-  img: 'images/1.jpg',
+  img: 'images/2.jpg',
   description: 'The knocking stops after what seemed like an eternity.',
   route1: 'continue...',
+  route2: '',
 });
 
 var scene5 = new Scene({
-  img: 'images/1.jpg',
+  img: 'images/2.jpg',
   description: 'The last man on Earth sat alone in a room.',
-  route1: 'the end.',
+  route1: 'next',
+  route2: '',
 });
 
 var scene6 = new Scene({
@@ -125,6 +127,13 @@ var scene16 = new Scene({
     route2: '',
 });
 
+var scene66 = new Scene({
+  img: 'images/static.gif',
+  description: 'the end.',
+  route1: '',
+  route2: '',
+});
+
   scene1.routes.push(scene2);
 
   scene2.routes.push(scene3, scene6);
@@ -132,6 +141,8 @@ var scene16 = new Scene({
   scene3.routes.push(scene4);
 
   scene4.routes.push(scene5);
+
+  scene5.routes.push(scene66);
 
   scene6.routes.push(scene7);
 
@@ -155,7 +166,7 @@ $(document).ready(function(){
   // Set up variables
   var currentScene = scene1;
   var textFrame = $('.textframe');
-  var storyFrame = $('.storyframe');
+  var img = $('#scene');
   var leftButton = $('.buttonleft');
   var rightButton = $('.buttonright');
 
@@ -163,12 +174,11 @@ $(document).ready(function(){
     console.log(currentScene.description);
     console.log(currentScene.img);
     $('.textframe').text(currentScene.description);
-    $('.storyframe').text(currentScene.img);
+    $('#scene').css({
+      background: 'url(' + currentScene.img + ')'
+    });
     $('.buttonleft').text(currentScene.route1);
     $('.buttonright').text(currentScene.route2);
-    //jQuery
-    //populate screen with
-    //currentScene details
   };
 
 

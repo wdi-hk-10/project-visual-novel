@@ -14,117 +14,146 @@ var Scene = function(option) {
 
 // scene creation
 var scene1 = new Scene({
-  img: '../images/1.png',
-  description: 'The last man on Earth sat alone in a room.'
+  img: 'images/1.jpg',
+  description: 'The last man on Earth sat alone in a room.',
+  route0: 'continue...',
 });
 
 var scene2 = new Scene({
-  img: '../images/2.png',
-  description: 'There was a knock on the door...'
+  img: '/images/2.jpg',
+  description: 'There was a knock on the door...',
+  route1: 'ignore it',
+  route4: 'open the door',
 });
 
 var scene3 = new Scene({
-  img: '...',
-  description: '<h2>The man ignores it.</h2>'
+  img: 'images/1.jpg',
+  description: 'The man ignores it.',
+  route2: 'continue...',
 });
 
 var scene4 = new Scene({
-  img: '...',
-  description: '<h2>The knocking stops after what seemed like an eternity.</h2>'
+  img: 'images/1.jpg',
+  description: 'The knocking stops after what seemed like an eternity.',
+  route3: 'continue...',
 });
 
 var scene5 = new Scene({
-  img: '...',
-  description: '<h2>The last man on Earth sat alone in a room.</h2>'
+  img: 'images/1.jpg',
+  description: 'The last man on Earth sat alone in a room.',
 });
 
 var scene6 = new Scene({
-  img: '...',
-  description: '<h2>The man opens the door.</h2>'
+  img: 'images/1.jpg',
+  description: 'The man opens the door.',
+  route5: 'Step outside',
 });
 
 var scene7 = new Scene({
-  img: '...',
-  description: '<h2>The man looks into the peep hole. He does not see anyone outside his door.</h2>'
+  img: 'images/1.jpg',
+  description: 'There is nobody at the door. The man hears footsteps somewhere outside his house.',
+  route6: 'Leave from the back door',
+  route10: 'Leave the front door',
 });
 
 var scene8 = new Scene({
-  img: '...',
-  description: '<h2>There is nobody at the door. The man hears footsteps somewhere outside his house.</h2>'
+  img: 'images/1.jpg',
+  description: 'The man heads to the backyard to investigate.',
+  route7: 'Investigate the backyard',
 });
 
 var scene9 = new Scene({
-  img: '...',
-  description: '<h2>The man heads to the backyard to investigate.</h2>'
+  img: 'images/1.jpg',
+  description: 'The man sees a statue of a headless man in the backyard.',
+  route8: 'Go back home',
 });
 
 var scene10 = new Scene({
-  img: '...',
-  description: '<h2>The man sees a statue of a headless man in the backyard.</h2>'
+  img: 'images/1.jpg',
+  description: 'The man decides to go home. The door is closed. He turns the handle but it is locked. The man looks into the window...',
+  route9: 'Look through the window',
 });
 
 var scene11 = new Scene({
-  img: '...',
-  description: '<h2>The man decides to go home. The door is closed. He turns the handle but it is locked. The man looks into the window...</h2>'
+  img: 'images/1.jpg',
+  description: 'He sees a man, sitting alone in a room.',
 });
 
 var scene12 = new Scene({
-  img: '...',
-  description: '<h2>He sees a man, sitting alone in a room.</h2>'
+  img: 'images/1.jpg',
+  description: 'The man steps outside the door. There is a coffin planted firmly in the ground. It is chrome-colored and shines in the darkness of the night.',
+  route11: 'Go back home',
+  route13: 'Open the coffin',
 });
 
 var scene13 = new Scene({
-  img: '...',
-  description: '<h2>The man steps outside the door. There is a coffin planted firmly in the ground. It is chrome-colored and shines in the darkness of the night.</h2>'
+  img: 'images/1.jpg',
+  description: 'The man opens the coffin with his hands.',
+  route14: 'Look inside',
 });
 
 var scene14 = new Scene({
-  img: '...',
-  description: '<h2>The man opens the coffin with his hands.</h2>'
+  img: 'images/1.jpg',
+  description: 'The coffin door opens gently. A fully-grown woman slowly walks out of the coffin.</h2>',
+  route15: 'Go home',
 });
 
 var scene15 = new Scene({
-  img: '...',
-  description: '<h2>The coffin door opens gently. A fully-grown woman slowly walks out of the coffin.</h2>'
+  img: 'images/1.jpg',
+  description: 'The last man on Earth has found the last woman on Earth.',
 });
 
 var scene16 = new Scene({
-  img: '...',
-  description: '<h2>The last man on Earth has found the last woman on Earth.</h2>'
+  img: 'images/1.jpg',
+  description: 'Freaked out by the unexplainable appearence of the coffin, the man runs home.',
+    route12: 'Run home',
 });
 
-var scene17 = new Scene({
-  img: '...',
-  description: '<h2>Freaked out by the unexplainable appearence of the coffin, the man runs home.</h2>'
-});
-
-//scene1.routes.push()
+scene1.routes.push(scene2, scene3);
 
 $(document).ready(function(){
   // Set up variables
   var currentScene = scene1;
+  var loadScene =function(){
+    scene1.routes.push(scene2);
+    scene2.routes.push(scene3, scene6);
+    scene3.routes.push(scene4);
+    scene4.routes.push(scene5);
+    scene5.routes.push();
+    scene6.routes.push(scene7);
+    scene7.routes.push(scene8, scene12);
+    scene8.routes.push(scene9);
+    scene9.routes.push(scene10);
+    scene10.routes.push(scene11);
+    scene11.routes.push();
+    scene12.routes.push(scene16, scene13);
+    scene13.routes.push(scene14);
+    scene14.routes.push(scene15);
+    scene15.routes.push();
+    scene16.routes.push(scene5);
+    //jQuery
+    //populate screen with
+    //currentScene details
+  };
   var textFrame = $('.textframe');
-  var storyCG = $('.storycg');
+  var storyFrame = $('.storyframe');
   var leftButton = $('.buttonleft');
   var rightButton = $('.buttonright');
 
   // Main program
-
-  textFrame.append('The Last Man on Earth');
-  leftButton.append('start game');
-  rightButton.append('start game');
-
   leftButton.on('click', function(){
     $('.textframe').text(currentScene.description);
-    $('.storycg').text(currentScene.img)
+    $('.storyframe').text(currentScene.img);
+    $('.buttonleft').text('next');
     $('.buttonleft').text('next');
     $('.buttonright').text('next');
+    currentScene = currentScene.routes[0]
+    loadScene();
   });
 
   rightButton.on('click', function(){
-    $('.textframe').text(description);
-    $('.buttonleft').text('next');
-    $('.buttonright').text('next');
+
   });
 
+  loadScene();
 });

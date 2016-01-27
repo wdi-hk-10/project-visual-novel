@@ -29,12 +29,17 @@ body{
   background-position: center;
   position: relative;
   width: 605px;
-  height: 254px;
+  height: 255px;
   margin: 0 auto;
+}
+
+#dialogue {
   font-family: 'EBMain';
-  font-size: 50px;
+  font-size: 40px;
   color: white;
+  line-height: inherit;
   text-align: center;
+  padding: 40px;
 }
 
 .buttons {
@@ -79,7 +84,7 @@ body{
 }
 
 #scene {
-  background-image: url('../images/1.jpg');
+  background-image: url('../images/static.gif');
   position: absolute;
   width: 397px;
   height: 300px;

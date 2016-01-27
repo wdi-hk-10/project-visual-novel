@@ -8,6 +8,7 @@ Scenario C ('netflix') is the longest way to end the game. This is the *best* en
 
 var Scene = function(option) {
   this.img = option.img;
+  //this.sound = option.sound;
   this.description = option.description;
   this.routes = [];
   this.route1 = option.route1;
@@ -15,8 +16,27 @@ var Scene = function(option) {
 };
 
 // scene creation
+
+/*
+var scene0 = new Scene({
+  img:'',
+  description: '',
+  route1: '',
+  route2: '',
+});
+*/
+
+var scene0 = new Scene({
+  img:'images/static.gif',
+  //sound:'sound/twilightsyndrome.mp3',
+  description: 'The Last Man on Earth',
+  route1: 'Start',
+  route2: '',
+});
+
 var scene1 = new Scene({
   img: 'images/1.jpg',
+  //sound:'sound/twilightsyndrome.mp3',
   description: 'The last man on Earth sat alone in a room.',
   route1: 'continue...',
   route2: '',
@@ -134,6 +154,10 @@ var scene66 = new Scene({
   route2: '',
 });
 
+//scene0.routes.push(scene1);
+
+  scene0.routes.push(scene1);
+
   scene1.routes.push(scene2);
 
   scene2.routes.push(scene3, scene6);
@@ -164,19 +188,21 @@ var scene66 = new Scene({
 
 $(document).ready(function(){
   // Set up variables
-  var currentScene = scene1;
-  var textFrame = $('.textframe');
+  var currentScene = scene0;
+  var text = $('#dialogue');
   var img = $('#scene');
+  //var sound = $('#sound');
   var leftButton = $('.buttonleft');
   var rightButton = $('.buttonright');
 
   var loadScene =function(){
     console.log(currentScene.description);
     console.log(currentScene.img);
-    $('.textframe').text(currentScene.description);
+    $('#dialogue').text(currentScene.description);
     $('#scene').css({
       background: 'url(' + currentScene.img + ')'
     });
+    //$('#sound').text(currentScene.sound);
     $('.buttonleft').text(currentScene.route1);
     $('.buttonright').text(currentScene.route2);
   };

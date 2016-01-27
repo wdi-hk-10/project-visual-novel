@@ -24,11 +24,6 @@ body{
   background: #000000;
 }
 
-.storyframe {
-  margin: 0 auto;
-  text-align: center;
-}
-
 .textframe {
   background: url('../images/textbox.png');
   background-position: center;
@@ -68,4 +63,26 @@ body{
   float: right;
   margin-top: -70px;
   margin-right: 50px;
+}
+
+.storyboard {
+  text-align: center;
+  margin: 0 auto;
+  width: 620px;
+  position: relative;
+}
+
+#tv {
+  background: url('../images/cgbox.png');
+  width: 640px;
+  height: 427px;
+}
+
+#scene {
+  background: url('../images/1.jpg');
+  position: absolute;
+  width: 397px;
+  height: 300px;
+  top: 52px;
+  left: 54px;
 }

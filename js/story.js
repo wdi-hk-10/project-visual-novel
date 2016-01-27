@@ -109,12 +109,6 @@ var scene16 = new Scene({
     route12: 'Run home',
 });
 
-scene1.routes.push(scene2, scene3);
-
-$(document).ready(function(){
-  // Set up variables
-  var currentScene = scene1;
-  var loadScene =function(){
     scene1.routes.push(scene2);
     scene2.routes.push(scene3, scene6);
     scene3.routes.push(scene4);
@@ -131,29 +125,36 @@ $(document).ready(function(){
     scene14.routes.push(scene15);
     scene15.routes.push();
     scene16.routes.push(scene5);
-    //jQuery
-    //populate screen with
-    //currentScene details
-  };
+
+$(document).ready(function(){
+  // Set up variables
+  var currentScene = scene1;
   var textFrame = $('.textframe');
   var storyFrame = $('.storyframe');
   var leftButton = $('.buttonleft');
   var rightButton = $('.buttonright');
 
-  // Main program
-  leftButton.on('click', function(){
+  var loadScene =function(){
     $('.textframe').text(currentScene.description);
     $('.storyframe').text(currentScene.img);
     $('.buttonleft').text('next');
-    $('.buttonleft').text('next');
     $('.buttonright').text('next');
-    currentScene = currentScene.routes[0]
+    //jQuery
+    //populate screen with
+    //currentScene details
+  };
+
+
+  // Main program
+  leftButton.on('click', function(){
+    currentScene = currentScene.routes[0];
     loadScene();
   });
 
   rightButton.on('click', function(){
-
+    currentScene = currentScene.routes[1];
+    loadScene();
   });
 
-  loadScene();
+
 });

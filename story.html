@@ -11,43 +11,43 @@
 
     <script src='js/jquery.min.js'></script>
     <script src='js/bootstrap.min.js'></script>
+    <script src="js/scenes.js"></script>
     <script src='js/story.js'></script>
 
     <link href='css/bootstrap.min.css' rel='stylesheet'>
     <link href='css/story.css' rel="stylesheet">
   </head>
-    <body>
+  <body>
+    <!--
+    <header>
+        <div class='storytitle'>
+          <h1 class="text-center">"The Last Man on Earth"</h1>
+        </div>
+    </header>
+    -->
 
-          <!--
-          <header>
-              <div class='storytitle'>
-                <h1 class="text-center">"The Last Man on Earth"</h1>
-              </div>
-          </header>
-          -->
+    <audio id='sound' autoplay>
+      <source src="sound/twilightsyndrome.mp3">
+    </audio>
 
-          <audio id='sound' autoplay loop>
-            <source src="sound/twilightsyndrome.mp3">
-          </audio>
+    <div class='storyboard'>
+      <div id='tv'>
+        <div id='scene'></div>
+      </div>
+    </div>
 
-          <div class='storyboard'>
-            <div id='tv'>
-              <div id='scene'></div>
-            </div>
-          </div>
+    <div class='textframe'>
+      <div id='dialogue' class='typingeffect'></div>
+    </div>
 
-          <div class='textframe'>
-            <div id='dialogue'></div>
-          </div>
+    <div class='buttons'>
+      <div class='choice1'>
+        <button class='buttonleft'></button>
+      </div>
 
-          <div class='buttons'>
-            <div class='choice1'>
-              <button class='buttonleft'></button>
-            </div>
-
-            <div class='choice2'>
-              <button class='buttonright'></button>
-            </div>
-          </div>
-    </body>
+      <div class='choice2'>
+        <button class='buttonright'></button>
+      </div>
+    </div>
+  </body>
 </html>

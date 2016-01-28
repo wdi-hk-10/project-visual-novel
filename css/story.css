@@ -40,6 +40,25 @@ body{
   line-height: inherit;
   text-align: center;
   padding: 40px;
+  overflow:hidden;
+}
+
+.typingeffect {
+  width: 15em;
+  /*
+  white-space:nowrap;
+  overflow:hidden;
+  */
+  -webkit-animation: type 5s steps(50, end);
+  animation: type 5s steps(50, end);
+}
+
+@keyframes type{
+    from { width: 0; }
+}
+
+@-webkit-keyframes type{
+    from { width: 0; }
 }
 
 .buttons {

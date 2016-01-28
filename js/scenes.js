@@ -1,10 +1,3 @@
-/* Scenario A ('forever alone') will be the quickest way to end the game. This route contains 5 event CG to reach the worse ending.
-
-Scenario B ('paradox') takes 8 event CG to reach the ending.
-
-Scenario C ('netflix') is the longest way to end the game. This is the *best* ending. Takes 8 event CG to reach the best ending.
-*/
-
 var Scene = function(option) {
   this.img = option.img;
   //this.sound = option.sound;
@@ -16,139 +9,128 @@ var Scene = function(option) {
 
 // scene creation
 
-/*
-var scene0 = new Scene({
-  img:'',
-  description: '',
-  route1: '',
-  route2: '',
-});
-*/
-
 var scene0 = new Scene({
   img:'images/static.gif',
-  //sound:'sound/twilightsyndrome.mp3',
   description: '',
   route1: 'Start',
-  route2: 'Start',
+  route2: '',
 });
 
 var scene1 = new Scene({
-  img: 'images/1.jpg',
-  //sound:'sound/twilightsyndrome.mp3',
-  description: 'The last man on Earth sat alone in a room.',
-  route1: 'continue...',
-  route2: '',
+  img: 'images/2.jpg',
+  description: 'It is saturday night. You feel bored shitless. What do you do?',
+  route1: 'power on your computer',
+  route2: 'pick up your cell phone',
 });
 
 var scene2 = new Scene({
-  img: 'images/2.jpg',
-  description: 'There was a knock on the door...',
-  route1: 'ignore it',
-  route2: 'open the door',
+  img: '',
+  description: 'You pick up your phone',
+  route1: 'call your best friend',
+  route2: 'text your best friend',
 });
 
 var scene3 = new Scene({
-  img: 'images/2.jpg',
-  description: 'The man ignores it.',
-  route1: 'continue...',
-  route2: '',
+  img: '',
+  description: 'You call your best friend but nobody is picking up.',
+  route1: 'send your friend an SMS',
+  route2: 'give up',
 });
 
 var scene4 = new Scene({
-  img: 'images/2.jpg',
-  description: 'The knocking stops after what seemed like an eternity.',
-  route1: 'continue...',
+  img: '',
+  description: 'You send your best friend a text message.',
+  route1: 'message sent!',
   route2: '',
 });
 
 var scene5 = new Scene({
-  img: 'images/2.jpg',
-  description: 'The last man on Earth sat alone in a room.',
-  route1: 'next',
+  img: '',
+  description: 'You decide to turn on the computer.',
+  route1: 'press the power button',
   route2: '',
 });
 
 var scene6 = new Scene({
-  img: 'images/1.jpg',
-  description: 'The man opens the door.',
-  route1: 'Step outside',
-  route2: '',
+  img: '',
+  description: 'The computer is working. What do you do?',
+  route1: 'watch porn',
+  route2: 'go on Reddit',
 });
 
 var scene7 = new Scene({
-  img: 'images/1.jpg',
-  description: 'There is nobody at the door. The man hears footsteps somewhere outside his house.',
-  route1: 'Leave from the back door',
-  route2: 'Leave the front door',
+  img: '',
+  description: 'Although you have a strong urge to touch yourself at night, you go against your will because this is not your computer',
+  route1: 'go on Reddit',
+  route2: 'go to bed',
 });
 
 var scene8 = new Scene({
-  img: 'images/1.jpg',
-  description: 'The man heads to the backyard to investigate.',
-  route1: 'Investigate the backyard',
+  img: '',
+  description: 'You go onto your favorite online message board. A topic of discussion interests you deeply.',
+  route1: 'click the link to topic title',
   route2: '',
 });
 
 var scene9 = new Scene({
-  img: 'images/1.jpg',
-  description: 'The man sees a statue of a headless man in the backyard.',
-  route1: 'Go back home',
+  img: '',
+  description: 'The discussion is about sharing photos of haunted places in your local neighborhood.',
+  route1: 'keep reading',
   route2: '',
 });
 
 var scene10 = new Scene({
-  img: 'images/1.jpg',
-  description: 'The man decides to go home. The door is closed. He turns the handle but it is locked. The man looks into the window...',
-  route1: 'Look through the window',
+  img: '',
+  description: '3 hours has gone by quickly. You remember there is an abandoned hotel near your home.',
+  route1: 'google the address',
   route2: '',
 });
 
 var scene11 = new Scene({
-  img: 'images/1.jpg',
-  description: 'He sees a man, sitting alone in a room.',
-  route1: 'the end.',
-  route2: '',
+  img: '',
+  description: 'You google map the address of the hotel. It is located 15 minutes from your home by walking distance. Do you wish to go tonight?',
+  route1: 'yes',
+  route2: 'no',
 });
 
 var scene12 = new Scene({
-  img: 'images/1.jpg',
-  description: 'The man steps outside the door. There is a coffin planted firmly in the ground. It is chrome-colored and shines in the darkness of the night.',
-  route1: 'Go back home',
-  route2: 'Open the coffin',
-});
-
-var scene13 = new Scene({
-  img: 'images/1.jpg',
-  description: 'The man opens the coffin with his hands.',
-  route1: 'Look inside',
+  img: '',
+  description: 'You decide to call it a night. You go to your room and sleep...',
+  route1: 'next',
   route2: '',
 });
 
+var scene13 = new Scene({
+  img: '',
+  description: 'feeling the excitement of urban exploration, you decide to check out the hotel tonight.',
+  route1: 'grab the flashlight',
+  route2: 'leave',
+});
+
 var scene14 = new Scene({
-  img: 'images/1.jpg',
-  description: 'The coffin door opens gently. A fully-grown woman slowly walks out of the coffin.',
-  route1: 'Go home',
+  img: '',
+  description: 'you grab a flashlight.',
+  route1: 'leave',
   route2: '',
 });
 
 var scene15 = new Scene({
-  img: 'images/1.jpg',
-  description: 'The last man on Earth has found the last woman on Earth.',
-  route1: 'the end.',
+  img: '',
+  description: 'As you leave home, you walk in the general direction of the hotel.',
+  route1: 'check google maps',
   route2: '',
 });
 
 var scene16 = new Scene({
-  img: 'images/1.jpg',
-  description: 'Freaked out by the unexplainable appearence of the coffin, the man runs home.',
-    route1: 'Run home',
+  img: '',
+  description: 'You continue to walk in the direction google maps tells you. You reach the hotel after 20 minutes of walking.',
+    route1: 'approach the hotel door',
     route2: '',
 });
 
 var scene17 = new Scene({
-  img: 'images/static.gif',
-  description: 'the end.',
+  img: '',
+  description: '',
   route1: '',
   route2: '',
 });
@@ -734,27 +716,33 @@ var scene100 = new Scene({
   route2: '',
 });
 
-var scene999 = new Scene({
-  img:'',
-  description: '',
-  route1: '',
+var scene666 = new Scene({
+  img:'images/youdied.png',
+  description: 'R.I.P.',
+  route1: 'next',
   route2: '',
 });
-//scene0.routes.push(scene1);
 
-scene0.routes.push(scene1, scene1);
+var scene999 = new Scene({
+  img:'images/gameover.jpg',
+  description: 'Play Again?',
+  route1: 'next',
+  route2: '',
+});
 
-scene1.routes.push(scene2);
+scene0.routes.push(scene1);
 
-scene2.routes.push(scene3, scene6);
+scene1.routes.push(scene5, scene2);
 
-scene3.routes.push(scene4);
+scene2.routes.push(scene3, scene4);
+
+scene3.routes.push(scene4, scene5);
 
 scene4.routes.push(scene5);
 
-scene5.routes.push(scene0);
+scene5.routes.push(scene6);
 
-scene6.routes.push(scene7);
+scene6.routes.push(scene7, scene8);
 
 scene7.routes.push(scene8, scene12);
 
@@ -762,17 +750,17 @@ scene8.routes.push(scene9);
 
 scene9.routes.push(scene10);
 
-scene10.routes.push(scene1, scene1);
+scene10.routes.push(scene11);
 
-scene11.routes.push(scene2);
+scene11.routes.push(scene13, scene12);
 
-scene12.routes.push(scene3, scene6);
+scene12.routes.push(scene999);
 
-scene13.routes.push(scene4);
+scene13.routes.push(scene14, scene15);
 
-scene14.routes.push(scene5);
+scene14.routes.push(scene15);
 
-scene15.routes.push(scene0);
+scene15.routes.push(scene16);
 
 scene16.routes.push(scene7);
 
@@ -943,3 +931,7 @@ scene98.routes.push(scene9);
 scene99.routes.push(scene10);
 
 scene100.routes.push(scene10);
+
+scene666.routes.push(scene999, scene999);
+
+scene999.routes.push(scene0, scene0);

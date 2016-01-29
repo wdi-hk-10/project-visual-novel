@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'EBMain';
+  src: url('../font/EBMain.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+.storytitle {
+  margin-top: 0px;
+  background-color: #000000;
+  padding: 10px;
+}
+
+.storytitle > h1{
+  font-family: 'EBMain';
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+*/
+
+body{
+  background: #000000;
+}
+
+.textframe {
+  background: url('../images/textbox.png');
+  background-position: center;
+  position: relative;
+  width: 605px;
+  height: 255px;
+  margin: 0 auto;
+}
+
+#dialogue {
+  font-family: 'EBMain';
+  font-size: 40px;
+  color: white;
+  line-height: inherit;
+  text-align: center;
+  padding: 40px;
+  overflow:hidden;
+}
+/*
+.typingeffect {
+  width: 15em;
+
+  white-space:nowrap;
+  overflow:hidden;
+  -webkit-animation: type 5s steps(50, end);
+  animation: type 5s steps(50, end);
+}
+
+@keyframes type{
+    from { width: 0; }
+}
+
+@-webkit-keyframes type{
+    from { width: 0; }
+}
+*/
+.buttons {
+  text-align: center;
+}
+
+.buttonleft {
+  font-family: 'EBMain';
+  font-size: 40px;
+  color: white;
+  background-color: black;
+  height: 60px;
+  width: 300px;
+  float: left;
+  margin-top: -70px;
+  margin-left: 50px;
+}
+
+.buttonright {
+  font-family: 'EBMain';
+  font-size: 40px;
+  color: white;
+  background-color: black;
+  height: 60px;
+  width: 300px;
+  float: right;
+  margin-top: -70px;
+  margin-right: 50px;
+}
+
+.storyboard {
+  text-align: center;
+  margin: 0 auto;
+  width: 620px;
+  position: relative;
+}
+
+#tv {
+  background: url('../images/cgbox.png');
+  width: 640px;
+  height: 427px;
+}
+
+#scene {
+  background-image: url('../images/static.gif');
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 397px;
+  height: 300px;
+  top: 52px;
+  left: 54px;
+  background-size: cover;
+  background-position: center;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>friday night</title>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name='viewport" content="width=device-width, initial-scale=1'>
+    <meta name='description' content='visual novel project'>
+    <meta name='author' content=''>
+
+    <script src='js/jquery.min.js'></script>
+    <script src='js/bootstrap.min.js'></script>
+    <script src="js/scenes.js"></script>
+    <script src='js/story.js'></script>
+
+    <link href='css/bootstrap.min.css' rel='stylesheet'>
+    <link href='css/story.css' rel="stylesheet">
+  </head>
+  <body>
+    <!--
+    <header>
+        <div class='storytitle'>
+          <h1 class="text-center">"The Last Man on Earth"</h1>
+        </div>
+    </header>
+    -->
+
+    <audio id='sound' autoplay>
+      <source src="sound/twilightsyndrome.mp3">
+    </audio>
+
+    <div class='storyboard'>
+      <div id='tv'>
+        <div id='scene'></div>
+      </div>
+    </div>
+
+    <div class='textframe'>
+      <div id='dialogue' class='typingeffect'></div>
+    </div>
+
+    <div class='buttons'>
+      <div class='choice1'>
+        <button class='buttonleft'></button>
+      </div>
+
+      <div class='choice2'>
+        <button class='buttonright'></button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -12,7 +12,7 @@ $(document).ready(function(){
     console.log(currentScene.img);
     text.text(currentScene.description);
     img.css({
-    background: 'url(' + currentScene.img + ')'
+    backgroundImage: 'url(' + currentScene.img + ')'
     });
 
     if (currentScene.route1){
